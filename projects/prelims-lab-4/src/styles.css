@@ -1,0 +1,29 @@
+body {
+  margin: 2rem;
+}
+p {
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.heading {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+.content {
+  margin-left: 1.4rem;
+  margin-right: 1rem;
+}
+.property-binding {
+  width: 5.5rem;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.image {
+  width: 10rem;
+  margin-bottom: 1rem;
+}
+.eventbinding {
+  width: 8rem;
+  margin-right: 1rem;
+}

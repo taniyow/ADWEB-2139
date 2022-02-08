@@ -1,0 +1,91 @@
+<div class="container">
+  <h1>Using Data Binding in Angular (v13)</h1>
+  <hr/><br/>
+  <h4>One-Way Data Binding</h4>
+  <!-- Interpolation -->
+  <p class="heading lead">
+    1. String/Numbers Interpolation
+  </p>
+  <div class="content">
+    <p>This is an example of <em>{{string}}</em>. <br/>
+      You can also do this with a number: <em>{{number}}</em>.
+    </p>
+  </div>
+  <!-- Property Binding -->
+  <p class="heading lead">
+    2. Property Binding
+  </p>
+  <div class="content d-inline-flex">
+    <p>You can also bind data using the</p>
+    <div class="property-binding">
+      <input type="text" class="form-control" [value]="property" disabled>
+    </div>
+    <p> of an element.</p>
+  </div>
+  <!-- Style Binding -->
+  <p class="heading lead">
+    3. Style Binding
+  </p>
+  <div class="content">
+    <p [style.color]="myColor">
+      The color style of this text line is using style binding.
+    </p>
+  </div>
+  <!-- Class Binding -->
+  <p class="heading lead">
+    4. Class Binding
+  </p>
+  <div class="content">
+    <p [class]="appliedCSSClass">
+      This line uses the applied class using class binding.
+    </p>
+    <p [class.blue]="notappliedCSSClass">
+      If boolean is true it will use the class blue. If not, no class binding applied.
+    </p>
+  </div>
+  <!-- Binding Images -->
+  <p class="heading lead">
+    5. Binding Images
+  </p>
+  <div class="content">
+    <p>Using Interpolation</p>
+    <img src={{imageURL}} class="image"/>
+    <p>Using Property Binding</p>
+    <img [src]="imageURL" class="image"/>
+  </div>
+  <!--  -->
+  <hr/><br/>
+  <h4>Two-Way Data Binding</h4>
+  <!-- Event Binding -->
+  <p class="heading lead">
+    1. Event Binding
+  </p>
+  <div class="content">
+    <p>Using this will show result on console.log</p>
+    <button (click)="showData($event)" class="btn btn-outline-dark">
+      (click)
+    </button>
+    <p>This will also produce the same result.</p>
+    <button on-click="showData($event)" class="btn btn-outline-dark">
+      on-click
+    </button>
+  </div>
+  <p class="heading lead">
+    2. Event Binding 2
+  </p>
+  <div class="content">
+    <p><em>This events will get data. Check the console for the result.</em></p>
+    <p><b>Keyup</b> will only record the input when the key press was released.</p>
+    <input type="text" #keyupbox placeholder="keyup box" 
+    (keyup)="getData(keyupbox.value)" class="form-control eventbinding"/>
+    <p><b>Keyinput</b> will record data each time there's input.</p>
+    <input type="text" #keyinputbox placeholder="input box" 
+    (input)="getData(keyinputbox.value)" class="form-control eventbinding"/>
+    <p><b>Keydown</b> will record data just like keyinput, but will start with a 0 (blank).</p>
+    <input type="text" #keydownbox placeholder="keydown box" 
+    (keydown)="getData(keydownbox.value)" class="form-control eventbinding"/>
+    <p><b>Keyblur</b> only records data when an event was made outside the element.</p>
+    <input type="text" #keyblurbox placeholder="blur box" 
+    (blur)="getData(keyblurbox.value)" class="form-control eventbinding"/>
+  </div>
+</div>
