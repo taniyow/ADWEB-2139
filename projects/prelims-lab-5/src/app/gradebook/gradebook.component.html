@@ -1,0 +1,80 @@
+<div id="gradebook" class="d-inline-flex">
+  <div class="card">
+    <div class="card-header">
+      Gradebook
+    </div>
+    <div class="card-body">
+      <!-- Name Input -->
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" 
+          [(ngModel)]="student" id="name" 
+          placeholder="Student Name"/>
+        <label for="name">Name of Student</label>
+      </div>
+      <!-- Subject -->
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control"
+          [(ngModel)]="subject" id="subject" 
+          placeholder="99"/>
+        <label for="subject">Subject</label>
+      </div>
+      <p>Grades:</p>
+      <!-- Grades Input -->
+      <div class="form-floating mb-3">
+        <!-- Prelims -->
+        <input type="number" class="form-control" 
+          [(ngModel)]="prelims" id="prelims" 
+          placeholder="99"/>
+        <label for="prelims">Prelims</label>
+      </div>
+      <div class="form-floating mb-3">
+        <!-- Midterms -->
+        <input type="number" class="form-control"
+          [(ngModel)]="midterms" id="midterms" 
+          placeholder="99"/>
+        <label for="midterms">Midterms</label>
+      </div>
+      <div class="form-floating mb-3">
+        <!-- Finals -->
+        <input type="number" class="form-control"
+          [(ngModel)]="finals" id="finals" 
+          placeholder="99"/>
+        <label for="finals">Finals</label>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      Hello, {{student}}!
+    </div>
+    <div class="card-body">
+      <p>Your grades for <em>{{subject}}</em></p>
+      <!-- Grades Input -->
+      <div class="form-floating mb-3">
+        <!-- Prelims -->
+        <input type="number" class="form-control" id="prelims" 
+          [value]="prelims" placeholder="99" readonly/>
+        <label for="prelims">Prelims</label>
+      </div>
+      <div class="form-floating mb-3">
+        <!-- Midterms -->
+        <input type="number" class="form-control" id="midterms" 
+          [value]="midterms" placeholder="99" readonly/>
+        <label for="midterms">Midterms</label>
+      </div>
+      <div class="form-floating mb-3">
+        <!-- Finals -->
+        <input type="number" class="form-control" id="finals" 
+          [value]="finals" placeholder="99" readonly/>
+        <label for="finals">Finals</label>
+      </div>
+      <!-- Computed Grade Point Average -->
+      <p>Computed Grade Point Average for <em>{{subject}}</em></p>
+      <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="average" 
+          [value]="((prelims+midterms+finals)/3)" placeholder="99" readonly/>
+        <label for="average">Average</label>
+      </div>
+    </div>
+  </div>
+</div>
