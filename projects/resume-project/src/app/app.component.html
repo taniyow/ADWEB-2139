@@ -1,0 +1,114 @@
+<div class="container-fluid fixed-top" style="padding: 0;">
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container" id="navpad">
+      <div class="brand">
+        <a class="navbar-brand fontfamily title lh-1 d-flex align-items-end" 
+        href="#">ma<br/>rk.</a>
+      </div>
+      <button class="navbar-toggler ms-auto" type="button" 
+      data-bs-toggle="collapse" data-bs-target="#navbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbar">
+        <ul class="navbar-nav fontfamily">
+          <li class="nav-item d-inline-flex">
+            <span class="navbar-text">01.</span>
+            <a class="nav-link active nav-fontstyle" aria-current="page" href="#about">about</a>
+          </li>
+          <li class="nav-item d-inline-flex">
+            <span class="navbar-text">02.</span>
+            <a class="nav-link nav-fontstyle" href="#skills">skills</a>
+          </li>
+          <li class="nav-item d-inline-flex">
+            <span class="navbar-text">03.</span>
+            <a class="nav-link nav-fontstyle" href="#portfolio">portfolio</a>
+          </li>
+          <li class="nav-item d-inline-flex">
+            <span class="navbar-text">04.</span>
+            <a class="nav-link nav-fontstyle" href="#contact">contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container" id="about">
+  <div class="hero">
+    <div class="row">
+      <div class ="col d-flex align-items-center">
+        <div class="mb-3">
+            <p class="h2 fontfamily">
+              Hi, I'm<br/>
+              <h1 class="fontfamily">Mark Christian Tan.</h1>
+          <div>
+            <p>* Actually I'm a website, but I was built by him.</p>
+          </div>
+          <div>
+            <button type="button" class="btn btn-outline-dark">
+              Contact
+            </button>
+            <button type="button" class="btn btn-dark ms-2">
+              Download Resume
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class ="col">
+        <div class="d-flex justify-content-center">
+          <div class="profile-card">
+            <img src="assets/id.png" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- components -->
+<div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" 
+class="scrollspy-example" tabindex="0">
+  <div class="container">
+    <app-about></app-about>
+    <app-skills></app-skills>
+    <app-portfolio></app-portfolio>
+    <app-contact></app-contact>
+  </div>
+</div>
+<!--end of components -->
+
+<div class="social-container fixed-bottom">
+  <div class="d-flex flex-column flex-shrink-0">
+    <ul class="nav nav-pills nav-flush flex-column">
+      <li class="nav-item side-nav-spacer">
+          <a href="https://github.com/taniyow" aria-label="GitHub">
+            <img src="../assets/github.png" alt="Github" class="social-icon">
+          </a>
+      </li>
+      <li class="nav-item side-nav-spacer">
+        <a href="hhttps://www.linkedin.com/in/mcmtan" aria-label="Linkedin">
+          <img src="../assets/linkedin.png" alt="Linkedin" class="social-icon">
+        </a>
+      </li>
+      <li class="nav-item side-nav-spacer">
+        <a href="https://stackoverflow.com/users/11045499/taniyow" aria-label="Stackoverflow">
+          <img src="../assets/stackoverflow.png" alt="Stackoverflow" class="social-icon">
+        </a>
+      </li>
+      <li class="nav-item side-nav-spacer">
+        <a href="https://codepen.io/taniyow" aria-label="Codepen">
+          <img src="../assets/codepen.png" alt="Codepen" class="social-icon">
+        </a>
+      </li>
+        <div class="vr vr-left"></div>
+    </ul>
+  </div>
+</div>
+<div class="email-container fixed-bottom">
+  <div class="d-flex flex-column flex-shrink-0">
+    <a href="markchristianmtan@gmail.com" aria-label="Gmail" 
+    class="email font-family side-nav-spacer">
+      markchristianmtan@gmail.com
+    </a>
+    <div class="vr vr-right"></div>
+  </div>
+</div>
