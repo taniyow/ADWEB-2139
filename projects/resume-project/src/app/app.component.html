@@ -3,7 +3,7 @@
     <div class="container" id="navpad">
       <div class="brand">
         <a class="navbar-brand fontfamily title lh-1 d-flex align-items-end" 
-        href="#">ma<br/>rk.</a>
+        routerLink="/" routerLinkActive="active">ma<br/>rk.</a>
       </div>
       <button class="navbar-toggler ms-auto" type="button" 
       data-bs-toggle="collapse" data-bs-target="#navbar">
@@ -13,19 +13,19 @@
         <ul class="navbar-nav fontfamily">
           <li class="nav-item d-inline-flex">
             <span class="navbar-text">01.</span>
-            <a class="nav-link active nav-fontstyle" aria-current="page" href="#about">about</a>
+            <a class="nav-link active nav-fontstyle" aria-current="page" routerLink="/about" routerLinkActive="active">about</a>
           </li>
           <li class="nav-item d-inline-flex">
             <span class="navbar-text">02.</span>
-            <a class="nav-link nav-fontstyle" href="#skills">skills</a>
+            <a class="nav-link nav-fontstyle" routerLink="/skills" routerLinkActive="active">skills</a>
           </li>
           <li class="nav-item d-inline-flex">
             <span class="navbar-text">03.</span>
-            <a class="nav-link nav-fontstyle" href="#portfolio">portfolio</a>
+            <a class="nav-link nav-fontstyle" routerLink="/portfolio" routerLinkActive="active">portfolio</a>
           </li>
           <li class="nav-item d-inline-flex">
             <span class="navbar-text">04.</span>
-            <a class="nav-link nav-fontstyle" href="#contact">contact</a>
+            <a class="nav-link nav-fontstyle" routerLink="/contact" routerLinkActive="active">contact</a>
           </li>
         </ul>
       </div>
@@ -44,9 +44,9 @@
             <p>* Actually I'm a website, but I was built by him.</p>
           </div>
           <div>
-            <button type="button" class="btn btn-outline-dark">
+            <a class="btn btn-outline-dark" routerLink="/contact">
               Contact
-            </button>
+            </a>
             <button type="button" class="btn btn-dark ms-2">
               Download Resume
             </button>
@@ -68,10 +68,11 @@
 <div data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" 
 class="scrollspy-example" tabindex="0">
   <div class="container">
-    <app-about></app-about>
+    <router-outlet></router-outlet>
+    <!-- <app-about></app-about>
     <app-skills></app-skills>
     <app-portfolio></app-portfolio>
-    <app-contact></app-contact>
+    <app-contact></app-contact> -->
   </div>
 </div>
 <!--end of components -->

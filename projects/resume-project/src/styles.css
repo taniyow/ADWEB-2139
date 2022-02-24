@@ -69,15 +69,15 @@ body {
   padding-bottom: 1rem;
 }
 .profile-card {
-  width: 20rem;
+  width: 15rem;
   overflow: hidden;
   border-radius: 20px;
 }
 .profile-card img {
-  width: 20rem;
+  width: 15rem;
 }
 .section {
-  padding-top: 10rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
 }
 .heading {
