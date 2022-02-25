@@ -418,7 +418,111 @@
           }
         }
       }
+    },
+    "mt1-products-routing": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/mt1-products-routing",
+      "sourceRoot": "projects/mt1-products-routing/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/mt1-products-routing",
+            "index": "projects/mt1-products-routing/src/index.html",
+            "main": "projects/mt1-products-routing/src/main.ts",
+            "polyfills": "projects/mt1-products-routing/src/polyfills.ts",
+            "tsConfig": "projects/mt1-products-routing/tsconfig.app.json",
+            "assets": [
+              "projects/mt1-products-routing/src/favicon.ico",
+              "projects/mt1-products-routing/src/assets"
+            ],
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/mt1-products-routing/src/styles.css"
+            ],
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/mt1-products-routing/src/environments/environment.ts",
+                  "with": "projects/mt1-products-routing/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "mt1-products-routing:build:production"
+            },
+            "development": {
+              "browserTarget": "mt1-products-routing:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mt1-products-routing:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mt1-products-routing/src/test.ts",
+            "polyfills": "projects/mt1-products-routing/src/polyfills.ts",
+            "tsConfig": "projects/mt1-products-routing/tsconfig.spec.json",
+            "karmaConfig": "projects/mt1-products-routing/karma.conf.js",
+            "assets": [
+              "projects/mt1-products-routing/src/favicon.ico",
+              "projects/mt1-products-routing/src/assets"
+            ],
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/mt1-products-routing/src/styles.css"
+            ],
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "prelims-lab-4"
+  "defaultProject": "mt1-products-routing"
 }

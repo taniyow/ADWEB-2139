@@ -1,0 +1,40 @@
+<div class="container" style="margin-top:7rem;">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all" type="button" role="tab" aria-controls="nav-all" aria-selected="true">All Products</button>
+      <button class="nav-link" id="nav-women-tab" data-bs-toggle="tab" data-bs-target="#nav-women" type="button" role="tab" aria-controls="nav-women" aria-selected="false">Women</button>
+      <button class="nav-link" id="nav-men-tab" data-bs-toggle="tab" data-bs-target="#nav-men" type="button" role="tab" aria-controls="nav-men" aria-selected="false">Men</button>
+      <button class="nav-link" id="nav-shoes-tab" data-bs-toggle="tab" data-bs-target="#nav-shoes" type="button" role="tab" aria-controls="nav-shoes" aria-selected="false">Shoes</button>
+      <button class="nav-link" id="nav-bags-tab" data-bs-toggle="tab" data-bs-target="#nav-bags" type="button" role="tab" aria-controls="nav-bags" aria-selected="false">Bags</button>
+      <button class="nav-link" id="nav-accessories-tab" data-bs-toggle="tab" data-bs-target="#nav-accessories" type="button" role="tab" aria-controls="nav-accessories" aria-selected="false">Accessories</button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent" >
+    <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+      <div class="my-5 d-flex flex-row">
+        <div class="row align-items-start">
+          <div class="col me-3 my-3" *ngFor="let i of Products">
+            <div class="card" style="width: 18rem; height: 35rem;">
+              <img src="{{i.source}}" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">{{i.name}}</h5>
+                <p class="card-text">{{i.description}}</p>
+              </div>
+              <div class="card-footer py-3">
+                <div class="d-grid gap-2 d-flex justify-content-between">
+                  <a href="#" class="btn btn-light border-0">More Info</a>
+                  <a href="#" class="btn btn-danger border-0">Add to Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="nav-women" role="tabpanel" aria-labelledby="nav-women-tab">WOMEN</div>
+    <div class="tab-pane fade" id="nav-men" role="tabpanel" aria-labelledby="nav-men-tab">MEN</div>
+    <div class="tab-pane fade" id="nav-shoes" role="tabpanel" aria-labelledby="nav-shoes-tab">SHOES</div>
+    <div class="tab-pane fade" id="nav-bags" role="tabpanel" aria-labelledby="nav-bags-tab">BAGS</div>
+    <div class="tab-pane fade" id="nav-accessories" role="tabpanel" aria-labelledby="nav-accessories-tab">ACCESSORIES</div>
+  </div>
+</div>
