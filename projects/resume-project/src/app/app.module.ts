@@ -29,7 +29,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes) //add routermodule
+    RouterModule.forRoot(routes) //add routermodule and set forRoot(routes)
   ],
   exports: [RouterModule], //set exports for routermodule
   providers: [],
