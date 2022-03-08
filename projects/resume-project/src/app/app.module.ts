@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+//imported Routing Module
 import { RouterModule, Routes } from '@angular/router';
 
+//imported Components
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 
+//set Paths for Routing of Components
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'skills', component: SkillsComponent },
@@ -25,9 +29,9 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes) //add routermodule
   ],
-  exports: [RouterModule],
+  exports: [RouterModule], //set exports for routermodule
   providers: [],
   bootstrap: [AppComponent]
 })

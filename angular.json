@@ -522,6 +522,104 @@
           }
         }
       }
+    },
+    "midterms-ng-services": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/midterms-ng-services",
+      "sourceRoot": "projects/midterms-ng-services/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/midterms-ng-services",
+            "index": "projects/midterms-ng-services/src/index.html",
+            "main": "projects/midterms-ng-services/src/main.ts",
+            "polyfills": "projects/midterms-ng-services/src/polyfills.ts",
+            "tsConfig": "projects/midterms-ng-services/tsconfig.app.json",
+            "assets": [
+              "projects/midterms-ng-services/src/favicon.ico",
+              "projects/midterms-ng-services/src/assets"
+            ],
+            "styles": [
+              "projects/midterms-ng-services/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/midterms-ng-services/src/environments/environment.ts",
+                  "with": "projects/midterms-ng-services/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "midterms-ng-services:build:production"
+            },
+            "development": {
+              "browserTarget": "midterms-ng-services:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "midterms-ng-services:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/midterms-ng-services/src/test.ts",
+            "polyfills": "projects/midterms-ng-services/src/polyfills.ts",
+            "tsConfig": "projects/midterms-ng-services/tsconfig.spec.json",
+            "karmaConfig": "projects/midterms-ng-services/karma.conf.js",
+            "assets": [
+              "projects/midterms-ng-services/src/favicon.ico",
+              "projects/midterms-ng-services/src/assets"
+            ],
+            "styles": [
+              "projects/midterms-ng-services/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   },
   "defaultProject": "mt1-products-routing"
