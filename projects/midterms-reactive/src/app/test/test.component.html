@@ -1,0 +1,41 @@
+<div class="container my-5">
+  <h2>Angular Pipes</h2>
+  <hr class="mb-5">
+
+  <h4>Date Pipes</h4>
+
+  <!-- Standard Date -->
+  <div class="mt-4">
+    <b>Standard Date</b><br/>
+    Today's Date:- {{ presentDate }}
+  </div>
+
+  <!-- Adding Date Pipe -->
+  <div class="mt-4">
+    <b>Adding Date Pipe</b><br/>
+    Today's Date:- {{ presentDate | date }}
+  </div>
+
+  <!-- Parameters in Date -->
+  <div class="mt-4">
+    <b>Date Parameters</b><br/>
+    This is a short date:- {{ presentDate | date:'shortDate' }} <br/>
+    This line shows the full date:- {{ presentDate | date:'fullDate'}} <br/>
+    This will show a formatted date:- {{ presentDate | date:'M/dd/yyyy' }} <br/>
+    This indicates the hours and minutes:- {{ presentDate | date:'h:mm' }} <br/>
+    <em>Tan, Mark Christian | WD-302</em>
+  </div>
+
+  <!-- Chained Pipes -->
+  <div class="mt-4">
+    <b>Chaining Date Pipes</b><br/>
+    Date with uppercase:- {{ presentDate | date:'fullDate' | uppercase }} <br/>
+    Date with lowercase:- {{ presentDate | date:'medium' | lowercase }}
+  </div>
+
+  <!-- Async Pipes -->
+  <div class="mt-4">
+    <b>Async Pipes</b><br/>
+    observable | async: Time: {{ time | async }}
+  </div>
+</div>
