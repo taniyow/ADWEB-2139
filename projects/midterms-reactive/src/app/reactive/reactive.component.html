@@ -1,0 +1,33 @@
+<div class="container my-5">
+  <h2>Reactive Programming</h2>
+  <hr class="mb-5">
+  <!-- of, from, range -->
+  <div class="mb-4">
+    <h5>Using of, from, and range</h5>
+    The summation of numbers ( <span *ngFor="let num of numbers"> {{ num }} </span> ) is {{ sum }}
+  </div>
+
+  <!-- Filter operator -->
+  <div class="mb-4">
+    <h5>Filter Operator</h5>
+    The summation of filtered numbers ( <span *ngFor="let num of filteredNumbers"> {{ num }} </span> ) is {{ filtered }}
+  </div>
+
+  <!-- Map operator -->
+  <div class="mb-4">
+    <h5>Map Operator</h5>
+    The summation of mapped numbers ( <span *ngFor="let num of mappedNumbers"> {{ num }} </span> ) is {{ map }}
+  </div>
+
+  <!-- Ajax API -->
+  <div class="mb-4">
+    <h5>Ajax API</h5>
+    The response from the API is <em> {{ apiMessage }} </em>
+  </div>
+
+  <!-- fromEvent -->
+  <div class="mb-4">
+    <h5>Using fromEvent</h5>
+    <a id="counter" href="#">Click here</a> to increment the counter value. The current counter value is {{ counter }}
+  </div>
+</div>

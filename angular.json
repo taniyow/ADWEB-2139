@@ -626,6 +626,110 @@
           }
         }
       }
+    },
+    "midterms-reactive": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/midterms-reactive",
+      "sourceRoot": "projects/midterms-reactive/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/midterms-reactive",
+            "index": "projects/midterms-reactive/src/index.html",
+            "main": "projects/midterms-reactive/src/main.ts",
+            "polyfills": "projects/midterms-reactive/src/polyfills.ts",
+            "tsConfig": "projects/midterms-reactive/tsconfig.app.json",
+            "assets": [
+              "projects/midterms-reactive/src/favicon.ico",
+              "projects/midterms-reactive/src/assets"
+            ],
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/midterms-reactive/src/styles.css"
+            ],
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/midterms-reactive/src/environments/environment.ts",
+                  "with": "projects/midterms-reactive/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "midterms-reactive:build:production"
+            },
+            "development": {
+              "browserTarget": "midterms-reactive:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "midterms-reactive:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/midterms-reactive/src/test.ts",
+            "polyfills": "projects/midterms-reactive/src/polyfills.ts",
+            "tsConfig": "projects/midterms-reactive/tsconfig.spec.json",
+            "karmaConfig": "projects/midterms-reactive/karma.conf.js",
+            "assets": [
+              "projects/midterms-reactive/src/favicon.ico",
+              "projects/midterms-reactive/src/assets"
+            ],
+            "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "projects/midterms-reactive/src/styles.css"
+            ],
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "mt1-products-routing"
