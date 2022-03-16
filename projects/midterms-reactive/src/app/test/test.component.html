@@ -46,4 +46,22 @@
     KRW : {{ price | currency:'KRW' }} <br/>
     EUR : {{ price | currency:'EUR' }} <br/>
   </div>
+
+  <!-- Slice Pipe -->
+  <div class="mt-4">
+    <b>Slice Pipe</b><br/>
+    Start index :- {{ Fruits | slice:2 }} <br/>
+    Start and end index :- {{ Fruits | slice:1:4 }} <br/>
+    Negative index :- {{ Fruits | slice:-2 }} <br/>
+    Negative start and end index :- {{ Fruits | slice:-4:-2 }} <br/>
+  </div>
+
+  <!-- Decimal Pipe -->
+  <div class="mt-4">
+    <b>Decimal Pipe</b><br/>
+    Decimal No. 1 (Default): {{ decimalNum1 | number }} <br/>
+    Decimal No. 2 (Default): {{ decimalNum2 | number }} <br/><br/>
+    Decimal No. 1 (Formatting applied): {{ decimalNum1 | number:'3.1' }} <br/>
+    Decimal No. 2 (Formatting applied): {{ decimalNum2 | number:'2.1-4' }} <br/>
+  </div>
 </div>

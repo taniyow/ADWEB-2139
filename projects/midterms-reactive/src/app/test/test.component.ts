@@ -17,7 +17,15 @@ export class TestComponent implements OnInit {
     setInterval(() => observer.next(new Date().toString()), 1000);
   });
 
+  // Currency Pipe
   price: number = 20000;
+
+  // Slice Pipe
+  Fruits = ['Apple', 'Orange', 'Grapes', 'Mango', 'Kiwi', 'Pomegranate'];
+  
+  // Decimal Pipe
+  decimalNum1: number = 9.7589623;
+  decimalNum2: number = 5.43;
 
   constructor() { }
 
