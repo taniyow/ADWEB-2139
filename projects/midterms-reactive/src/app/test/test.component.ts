@@ -17,6 +17,8 @@ export class TestComponent implements OnInit {
     setInterval(() => observer.next(new Date().toString()), 1000);
   });
 
+  price: number = 20000;
+
   constructor() { }
 
   ngOnInit(): void {

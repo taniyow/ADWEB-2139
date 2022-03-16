@@ -2,8 +2,6 @@
   <h2>Angular Pipes</h2>
   <hr class="mb-5">
 
-  <h4>Date Pipes</h4>
-
   <!-- Standard Date -->
   <div class="mt-4">
     <b>Standard Date</b><br/>
@@ -26,16 +24,26 @@
     <em>Tan, Mark Christian | WD-302</em>
   </div>
 
-  <!-- Chained Pipes -->
+  <!-- Chained Pipe -->
   <div class="mt-4">
-    <b>Chaining Date Pipes</b><br/>
+    <b>Chaining Date Pipe</b><br/>
     Date with uppercase:- {{ presentDate | date:'fullDate' | uppercase }} <br/>
     Date with lowercase:- {{ presentDate | date:'medium' | lowercase }}
   </div>
 
-  <!-- Async Pipes -->
+  <!-- Async Pipe -->
   <div class="mt-4">
-    <b>Async Pipes</b><br/>
+    <b>Async Pipe</b><br/>
     observable | async: Time: {{ time | async }}
+  </div>
+
+  <!-- Currency Pipe -->
+  <div class="mt-4">
+    <b>Currency Pipe</b><br/>
+    USD (Default) : {{ price | currency:'':true }} <br/>
+    INR : {{ price | currency:'INR' }} <br/>
+    PHP : {{ price | currency:'PHP' }} <br/>
+    KRW : {{ price | currency:'KRW' }} <br/>
+    EUR : {{ price | currency:'EUR' }} <br/>
   </div>
 </div>
