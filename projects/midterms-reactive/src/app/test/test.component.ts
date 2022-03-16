@@ -27,6 +27,10 @@ export class TestComponent implements OnInit {
   decimalNum1: number = 9.7589623;
   decimalNum2: number = 5.43;
 
+  // Percent Pipe
+  num1: number = 0.259;
+  num2: number = 1.3495;
+
   constructor() { }
 
   ngOnInit(): void {

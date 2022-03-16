@@ -64,4 +64,12 @@
     Decimal No. 1 (Formatting applied): {{ decimalNum1 | number:'3.1' }} <br/>
     Decimal No. 2 (Formatting applied): {{ decimalNum2 | number:'2.1-4' }} <br/>
   </div>
+
+  <!-- Percent Pipe -->
+  <div class="mt-4">
+    <b>Percent Pipe</b><br/>
+    1. {{ num1 | percent }} <br/>
+    2. {{ num2 | percent:'4.3-5' }} <br/>
+    2.1 {{ num2 | percent:'4.3-5':'fr' }} <br/>
+  </div>
 </div>
